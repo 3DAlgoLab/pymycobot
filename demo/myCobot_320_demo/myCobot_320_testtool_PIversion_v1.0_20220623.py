@@ -117,10 +117,10 @@ class MycobotTest(object):
         self.test_IO_label = tkinter.Label(self.win, text="测试I/O：")
         self.test_IO_label.grid(row=11)
         self.test_basic_btn = tkinter.Button(
-            self.win, text="测试底部I/O", command=self.test_basic
+            self.win, text="Test Basic I/O", command=self.test_basic
         )
         self.test_atom_btn = tkinter.Button(
-            self.win, text="测试末端I/O", command=self.test_atom
+            self.win, text="Test Atom I/O", command=self.test_atom
         )
         self.test_basic_btn.grid(row=12)
         self.test_atom_btn.grid(row=12, column=1)
@@ -282,7 +282,7 @@ class MycobotTest(object):
         self.aging = threading.Thread(target=self._aging_test, daemon=True)
         self.aging.start()
         # self._aging_test()
-        self.write_log_to_Text("开始循环老化测试 ...")
+        self.write_log_to_Text("Start cycle aging test ...")
 
     def stop_aging_test(self):
         try:
